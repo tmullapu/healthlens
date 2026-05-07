@@ -1,9 +1,11 @@
 import os
-from dotenv import load_dotenv
-load_dotenv()import streamlit as st
+import streamlit as st
 import duckdb
 import pandas as pd
 from groq import Groq
+from dotenv import load_dotenv
+
+load_dotenv()
 
 FIPS_TO_STATE = {
     1:'Alabama', 2:'Alaska', 4:'Arizona', 5:'Arkansas', 6:'California',
