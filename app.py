@@ -26,7 +26,7 @@ st.set_page_config(page_title="HealthLens", page_icon="🔬", layout="wide")
 
 @st.cache_data
 def load_data():
-    return pd.read_parquet('/Users/tejaharshitamullapudi/Downloads/brfss-clinical-ai/data/processed/brfss_clean.parquet')
+    return pd.read_parquet('data/processed/brfss_clean.parquet')
 
 df = load_data()
 
