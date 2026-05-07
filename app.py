@@ -1,4 +1,6 @@
-import streamlit as st
+import os
+from dotenv import load_dotenv
+load_dotenv()import streamlit as st
 import duckdb
 import pandas as pd
 from groq import Groq
@@ -26,7 +28,7 @@ def load_data():
 
 df = load_data()
 
-client = Groq(api_key="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")
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 SCHEMA = """
 You are a SQL expert. Convert the user's question to a DuckDB SQL query.
